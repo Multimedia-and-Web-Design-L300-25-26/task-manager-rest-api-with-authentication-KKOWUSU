@@ -1,4 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vq8_GOgi)
+
 # Task Manager REST API with Authentication
 
 ## Overview
@@ -25,8 +26,8 @@ Then update the `.env` file with the following configuration:
 
 ```env
 PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+MONGO_URI=
+JWT_SECRET= authentic_key_access
 ```
 
 Do not commit the `.env` file to version control.
@@ -143,7 +144,7 @@ Implement the following routes:
 ## Environment Variables
 
 | Variable     | Description                        |
-|--------------|------------------------------------|
+| ------------ | ---------------------------------- |
 | `PORT`       | Port the server runs on            |
 | `MONGO_URI`  | MongoDB connection string          |
 | `JWT_SECRET` | Secret key used to sign JWT tokens |
@@ -154,18 +155,18 @@ Implement the following routes:
 
 ### Auth Endpoints
 
-| Method | Endpoint               | Description         | Auth Required |
-|--------|------------------------|---------------------|---------------|
-| POST   | `/api/auth/register`   | Register a new user | No            |
-| POST   | `/api/auth/login`      | Login and get token | No            |
+| Method | Endpoint             | Description         | Auth Required |
+| ------ | -------------------- | ------------------- | ------------- |
+| POST   | `/api/auth/register` | Register a new user | No            |
+| POST   | `/api/auth/login`    | Login and get token | No            |
 
 ### Task Endpoints
 
-| Method | Endpoint           | Description                  | Auth Required |
-|--------|--------------------|------------------------------|---------------|
-| POST   | `/api/tasks`       | Create a new task            | Yes           |
-| GET    | `/api/tasks`       | Get all tasks for the user   | Yes           |
-| DELETE | `/api/tasks/:id`   | Delete a task by ID          | Yes           |
+| Method | Endpoint         | Description                | Auth Required |
+| ------ | ---------------- | -------------------------- | ------------- |
+| POST   | `/api/tasks`     | Create a new task          | Yes           |
+| GET    | `/api/tasks`     | Get all tasks for the user | Yes           |
+| DELETE | `/api/tasks/:id` | Delete a task by ID        | Yes           |
 
 ---
 

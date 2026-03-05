@@ -1,9 +1,15 @@
+/* global jest */
 import request from "supertest";
 import app from "../src/app.js";
 
+
+
+
 describe("Auth Routes", () => {
 
+
   let token;
+
 
   it("should register a user", async () => {
     const res = await request(app)
@@ -31,5 +37,8 @@ describe("Auth Routes", () => {
 
     token = res.body.token;
   });
+    
+  
+
 
 });
